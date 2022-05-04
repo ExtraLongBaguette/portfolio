@@ -1,0 +1,110 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color-accent: #a61515;
+}
+
+.nav-bar {
+    background-color: #f1f1f1;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar-button {
+    width: 2rem;
+    height: 2rem;
+}
+
+.nav-bar-title {
+    font-family: monospace;
+}
+
+.introduction {
+    background-color: #f1f1f1;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 40rem;
+    box-shadow: inset 0 10px 9px -7px rgb(0, 0, 0);
+}
+
+.introduction-intro {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: left; */
+}
+
+.introduction-position {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+    color: white;
+    height: 50px;
+}
+
+.background {
+    background-image: url("img/coding-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgb(35, 35, 35);
+    height: 50rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    padding: 15px;
+    padding-top: 5rem;
+    align-content: center;
+    align-items: center;
+    box-shadow: inset 0 10px 9px -7px rgb(0, 0, 0);
+}
+
+.background-title {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.background-text {
+    grid-row: 2;
+    text-align: center;
+    padding: 0 2em 0 2em;
+}
+
+
+/* @media only screen and (max-width: 1200px) {} */
+
+@media only screen and (max-width: 750px) {
+    .background {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr;
+        height: 70rem;
+    }
+    .background-title {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 0;
+    }
+    .background-text {
+        grid-column: 1;
+        grid-row: auto;
+        padding: 0 2em 0 2em;
+    }
+}
